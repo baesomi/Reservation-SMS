@@ -1,0 +1,245 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:text="그룹 이름 "
+                android:textSize="15dp"
+                android:paddingTop="12dp" />
+
+            <EditText
+                android:id="@+id/gEdit"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="15dp"
+                android:text="사용자 추가 "
+                android:textSize="15dp" />
+
+
+            <ImageButton
+                android:id="@+id/pbookBtn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:onClick="pBookClick"
+                android:paddingTop="12dp"
+                android:src="@drawable/pb"
+                android:textSize="15dp"
+                android:layout_marginLeft="40dp"
+
+                />
+
+            <Button
+                android:id="@+id/inputBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:onClick="inputClick"
+                android:background="@drawable/direct_input"
+                android:layout_marginLeft="40dp"
+                android:layout_gravity="center"
+                />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/sendList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="5dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingTop="12dp"
+                android:text="분류  "
+                android:textSize="15dp" />
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/class1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:text="주기설정  "
+                android:textSize="15dp" />
+
+            <Switch
+                android:id="@+id/rotateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/rotateEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLength="3"
+                android:inputType="number"
+                android:text="7"
+                android:layout_marginLeft="100dp" />
+
+            <TextView
+                android:id="@+id/rotateText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="일마다"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:text="내용  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/mEdit"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginLeft="40dp"
+                android:maxLength="70"
+                android:hint="문자를 입력하세요.."
+                android:inputType="textMultiLine"
+                android:padding="7dp"
+                android:textSize="15dp" />
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약설정"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/pickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:onClick="dateSet"
+                android:padding="7dp"
+                android:background="@drawable/date_pick"
+                />
+
+            <Button
+                android:id="@+id/pickTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:onClick="timeSet"
+                android:padding="7dp"
+                android:background="@drawable/time_pick"
+                />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약시간"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:padding="7dp"
+                android:text=""
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/sBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="120dp"
+                android:onClick="sendClick"
+                android:padding="20dp"
+                android:background="@drawable/sending"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

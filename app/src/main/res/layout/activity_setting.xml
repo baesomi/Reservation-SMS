@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.SettingActivity">
+
+
+    <!--바꾼부분-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook 친구 생일 받아오기"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+        <com.facebook.login.widget.LoginButton
+            android:id="@+id/login_button"
+            android:layout_width="180dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="0dp"
+
+            />
+
+        <Button
+            android:layout_marginLeft="20dp"
+            android:layout_width="90dp"
+            android:layout_height="30dp"
+            android:background="@drawable/birthdaybt"
+            android:id="@+id/get"/>
+
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="알림 On/Off 설정"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        />
+
+
+    <Switch
+        android:id="@+id/toggleSwitch"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:textOn="On"
+        android:textOff="Off"
+        android:textSize="20dp"/>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="세부 설정"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="20dp"
+        >
+
+        <RadioGroup
+            android:id ="@+id/setSound"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="invisible"
+            >
+
+            <RadioButton
+                android:id="@+id/sAndV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="사운드 + 진동"
+                />
+
+            <RadioButton
+                android:id="@+id/vive"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="진동" />
+
+            <RadioButton
+                android:id="@+id/noSound"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:text="무음"
+
+                />
+        </RadioGroup>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

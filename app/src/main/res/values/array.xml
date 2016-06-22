@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="date_group">
+        <item >생일</item>
+        <item >새해</item>
+        <item >크리스마스</item>
+        <item >추석</item>
+        <item >새로 만들기</item>
+    </string-array>
+
+
+</resources>

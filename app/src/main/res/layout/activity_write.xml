@@ -1,0 +1,225 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingTop="12dp"
+                android:text="번호  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/pEdit"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp"
+                android:layout_weight="3"
+                android:hint="번호를 입력하세요"
+                android:inputType="phone"
+                android:padding="7dp"
+                android:textSize="15dp" />
+
+            <ImageButton
+                android:id="@+id/pBtn"
+                android:layout_width="50dp"
+                android:layout_height="48dp"
+                android:onClick="plusClick"
+                android:src="@drawable/pb" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:paddingTop="12dp"
+                android:text="이름  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/nEdit"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp"
+                android:entries="@array/date_group" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:text="분류  "
+                android:textSize="15dp" />
+
+
+            <com.jaredrummler.materialspinner.MaterialSpinner
+                android:id="@+id/class1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="40dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:text="주기설정  "
+                android:textSize="15dp" />
+
+            <Switch
+                android:id="@+id/rotateBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp" />
+
+            <EditText
+                android:id="@+id/rotateEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:maxLength="3"
+                android:inputType="number"
+                android:text="7"
+                android:layout_marginLeft="100dp" />
+
+            <TextView
+                android:id="@+id/rotateText"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="일마다"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:text="내용  "
+                android:textSize="15dp" />
+
+            <EditText
+                android:id="@+id/mEdit"
+                android:layout_width="230dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="40dp"
+                android:hint="문자를 입력하세요.."
+                android:inputType="textMultiLine"
+                android:maxLength="70"
+                android:padding="7dp"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약설정"
+                android:textSize="15dp" />
+
+            <Button
+                android:id="@+id/pickDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:onClick="dateSet"
+                android:padding="7dp"
+                android:background="@drawable/date_pick"
+                />
+
+            <Button
+                android:id="@+id/pickTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:onClick="timeSet"
+                android:padding="7dp"
+                android:background="@drawable/time_pick"
+                />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="예약시간"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/display"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:padding="7dp"
+                android:text=""
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp">
+
+            <Button
+                android:id="@+id/sBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="120dp"
+                android:onClick="sendClick"
+                android:padding="20dp"
+                android:background="@drawable/sending"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

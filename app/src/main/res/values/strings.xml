@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">문자를 부탁해</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="title_activity_history">HistoryActivity</string>
+    <string name="facebook_app_id">521573754696657</string>
+
+    <style name="SplashTheme" parent="@android:style/Theme.Light.NoTitleBar">
+        <item name="android:windowBackground">@drawable/splash_image</item>
+    </style>
+
+    <string-array name="sort_array">
+        <item>최신순</item>
+        <item>이름순</item>
+        <item>오래된순</item>
+    </string-array>
+
+    <string-array name="default_birthday">
+        <item>생일 축하합니다</item>
+        <item>생일인데 복받으세요</item>
+        <item>행복한 생일되세요</item>
+        <item></item>
+    </string-array>
+
+    <string-array name="default_year">
+        <item>새해에는 돈많이 벌고 건강하세요</item>
+        <item>이번년도에는 좋은일만 가득하기를</item>
+        <item>올해에는 시계보다 시공의 폭풍</item>
+    </string-array>
+
+    <string-array name="default_xmas">
+        <item>메리 크리쑤마쓰!!</item>
+        <item>Merry christmas ^_^V</item>
+        <item>이번 크리스마스도 혼자인거야?</item>
+    </string-array>
+    <string-array name="default_chu">
+        <item>즐거운 한가위 되세요.</item>
+        <item>즐추</item>
+        <item>송편 많이먹고 즐거운 추석보내세요</item>
+    </string-array>
+    <string-array name="default_parent">
+        <item>어머니 아버지 사랑해요 낳아주고 길러주셔서 감사합니다.</item>
+    </string-array>
+    <string-array name="default_teacher">
+        <item>선생님 감사합니다</item>
+        <item>가르쳐주시고 올바르게 이끌어주셔서 항상 감사하고 있습니다.</item>
+    </string-array>
+</resources>
